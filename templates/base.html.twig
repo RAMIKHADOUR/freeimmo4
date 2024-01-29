@@ -23,142 +23,16 @@
        
     </head>
     <body>
-        <!-- Creation navabar composant des logo et des buttons-->
-        <header class="fixed-top">
-            <div class="navbar p-3 mb-2">
-                <div class="container-fluid">
-                    <div>
-                        <a class="navbar-brand" href="home.html"><span id="free">Free</span><span id="immo">Immo</span></a>
-                        <a class="navbar-brand fs-5 fw-bolder text-primary " href="#">Estimation</a>   
-                    </div>
-                    <div>  
-                            <div class="input-group">
-                                <div class="form-outline" data-mdb-input-init>
-                                    <input id="search-input" type="search" id="form1" class="form-control" />
-                                   
-                                </div>
-                                <button id="search-button" type="button" class="btn btn-primary">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                    </div>
-                    <div>
-                        <a class="text-decoration-none m-4 text-danger fs-5 fw-bolder" href="inscription.html">S'Inscrire</a>
-                        <a class="btn btn-warning text-decoration-none fs-6 fw-bolder text-primary" href="connexion.html"
-                            role="button"><strong>+</strong>Deposer Une Annonce</a>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <br><br>
-        <!-- fin de header -->
+        {% block header %}
+      {% include "partials/_header.html.twig" %}
+        {% endblock %}
        
         {% block body %}
         {% endblock %}
 
-        <!-- Footer footer de resaux socieux et des images des villes -->
-        
-        
-        <footer class="bg-primary text-white text-center text-lg-start">
-        
-            <div class="container p-4">
-        
-                <div class="row">
-        
-                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                        <div class="mb-4">
-        
-                            <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="https://www.facebook.com"
-                                role="button"><i class="fab fa-facebook-f"></i></a>
-        
-                            <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="https://www.instagram.com"
-                                role="button"><i class="fab fa-google"></i></a>
-        
-        
-                            <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="https://twitter.com"
-                                role="button"><i class="fab fa-instagram"></i></a>
-        
-                            <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="https://www.whatsapp.com"
-                                role="button"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                        <strong>Restons en contact, inscrivez-vous à la newsletter !</strong>
-        
-                        <div class="">
-                            <form action="">
-        
-                                <div class="row d-flex justify-content-center">
-        
-                                    <div class="col-md-5 col-12">
-        
-                                        <div data-mdb-input-init class="form-outline mb-4">
-        
-                                            <input type="email" id="form5Example24" class="form-control"
-                                                placeholder="Votre E-mail" required />
-        
-                                        </div>
-                                    </div>
-        
-        
-        
-                                    <div class="col-md-5 col-12">
-        
-                                        <button data-mdb-ripple-init type="submit" class="btn btn-primary mb-4">
-                                            Subscribe
-                                        </button>
-                                    </div>
-        
-                                </div>
-        
-                            </form>
-                        </div>
-                    </div>
-        
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">Liens rapides</h5>
-        
-                        <ul class="list-unstyled mb-0">
-                            <li>
-                                <a href="#!" class="text-decoration-none text-white">Deposer une Annonce</a>
-                            </li>
-                            <li>
-                                <a href="#!" class="text-decoration-none text-white">Location</a>
-                            </li>
-                            <li>
-                                <a href="#!" class="text-decoration-none text-white">Acheter</a>
-                            </li>
-                            <li>
-                                <a href="#!" class="text-decoration-none text-white">Estimation</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">About</h5>
-        
-                        <ul class="list-unstyled mb-0">
-                            <li>
-                                <a href="#!" class=" text-decoration-none text-white">A Propos</a>
-                            </li>
-                            <li>
-                                <a href="#!" class=" text-decoration-none text-white">News</a>
-                            </li>
-                            <li>
-                                <a href="#!" class=" text-decoration-none text-white">Contacts</a>
-                            </li>
-                            <li>
-                                <a href="#!" class=" text-decoration-none text-white">Aide et support</a>
-                            </li>
-                        </ul>
-                    </div>
-        
-        
-                </div> 
-            </div>
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                © 2023 Copyright :
-                <a class="text-decoration-none text-white" href="home.html"> FreeImmo</a>
-            </div>
-        
-        </footer>
-        <!--Fi de footer-->
+      
+        {% block footer %}
+        {% include "partials/_footer.html.twig" %}
+        {% endblock %}
     </body>
 </html>
